@@ -1,0 +1,12 @@
+**/src/assets
+**/src/static
+**/node_modules
+**/.storybook
+**/storybook-static
+**/.idea
+**/public
+**/*.json
+**/vite.config.ts
+.eslintrc.cjs
+index.html
+README.md

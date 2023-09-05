@@ -1,0 +1,4 @@
+!.eslintrc.js
+*.json
+src/shims-vue.d.ts
+src/shims-window.d.ts
