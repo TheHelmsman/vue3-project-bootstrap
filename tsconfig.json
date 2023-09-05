@@ -38,7 +38,7 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules/*",
-    "assets/i18n/*.json"
+    "node_modules",
+    "src/locales/*.json"
   ]
 }

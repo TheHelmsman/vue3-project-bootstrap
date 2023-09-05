@@ -11,13 +11,13 @@ const config: Config = reactive({
 });
 
 export function useConfig(callback: (data: Config) => void = () => undefined) {
-  useEventListener(top, 'message', ({ data }) => {
+  useEventListener(top, 'message', (data: Config) => {
     if (data?.type === 'kms:set.config') {
       callback(Object.assign(config, data));
     }
   });
 
-  top.postMessage({ type: 'kms:get.config' }, '*');
+  if (top) top.postMessage({ type: 'kms:get.config' }, '*');
 
   callback(config);
 

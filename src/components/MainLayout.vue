@@ -1,11 +1,21 @@
 <template>
-  <div>
-    <h1>{{ t('vue3project.title') }}</h1>
+  <div class="main-layout">
+    <h1>{{ props.title }}</h1>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
+type Props = {
+  title?: string;
+};
 
-const { t } = useI18n();
+const props = withDefaults(defineProps<Props>(), {
+  title: '',
+});
 </script>
+
+<style>
+.main-layout {
+  font-size: 14px;
+}
+</style>

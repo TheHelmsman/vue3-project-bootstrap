@@ -1,2 +1,2 @@
 export { Config } from './config';
-export { MainState } from './stores'
+export { MainState } from './stores';
