@@ -1,20 +1,23 @@
 <template>
   <div class="main-layout">
-    <h1>{{ props.title }}</h1>
+    <TreeView class="tree">
+      <TreeViewItem />
+    </TreeView>
   </div>
 </template>
 
 <script setup lang="ts">
-type Props = {
-  title?: string;
-};
-
-const props = withDefaults(defineProps<Props>(), {
-  title: '',
-});
+import TreeView from '@/components/TreeView.vue';
+import TreeViewItem from '@/components/TreeViewItem.vue';
 </script>
 
-<style>
+<style lang="scss">
+/* override with custom colors */
+.main-layout > .tree > .item > .name {
+  color: red;
+  font-weight: bold;
+}
+
 .main-layout {
   font-size: 14px;
 }

@@ -32,9 +32,7 @@ export default defineConfig(({ mode }) => {
           additionalData: `
             @use "sass:math";
             @use "sass:color";
-            @import "@/style/index.scss";
-            @import "@/style/_core";
-            @import "@/assets/fonts/iconfont/index";
+            @import "@/styles/index.scss";
           `,
         }, // global css
       },
